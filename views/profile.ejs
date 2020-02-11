@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{padding: 15px;background-color: aqua;}
+    </style>
+    
+</head>
+<body>
+    <%- include ('partials/nav.ejs') %>
+    <h1>Welcome to Node</h1>
+    <p>Please wait while the api is loading</p>
+    <p>Welcome to the profile of <%=person%> </p>
+    <p><%=person%>'s hobbies are : </p>
+    <!-- <ul>
+       
+            <%data.hobbies.forEach(function(item){%>
+                <li>
+                    <%=item%>
+                </li>
+
+            <%});%>
+        
+    </ul>
+     -->
+</body>
+</html>
