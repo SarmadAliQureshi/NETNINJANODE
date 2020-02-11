@@ -126,8 +126,9 @@ server.listen(8080,'127.0.1.1')
 
  app.listen(3000);
  app.get('/',function(req,res){
-     res.send("saramd ali")
+     res.sendFile(__dirname+"/index.html")
  })
+
  app.get('/home',function(req,res){
     //  res.sendFile(__dirname+'/index.html')
     res.render('index')
