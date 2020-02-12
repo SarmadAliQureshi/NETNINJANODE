@@ -134,6 +134,10 @@ server.listen(8080,'127.0.1.1')
     res.render('index')
  })
 
+ app.get('/contact',function(req,res){
+     res.render('contact')
+ })
+
  app.get('/profile/:name',function(req,res){
     // res.send("Your name is "+req.params.name)
     data = {age:'20',hobbies : ['eating','sleeping', 'hiking']}
