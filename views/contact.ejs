@@ -12,8 +12,19 @@
     <%- include ('partials/nav.ejs') %>
 
     <h1>Contact Page</h1>
+    <p>Name of person is <%=qs.name%> </p>
+    <p>Your age is <%=qs.age%></p>
     <p>You can contact me at </p>
-    <p> 1111 </p>
+    <p> 123 </p>
+    <form id="contact-form">
+        <label for="who">Who do you want to contact?</label>
+        <input type="text" name="who" value="<%=qs.name%>">
+        <label for="department">Which department?</label>
+        <input type="text" name="department" value="<%=qs.department%>">
+        <label for="email">Your email?</label>
+        <input type="text" name="email" value="<%=qs.email%>">
+
+    </form>
 
     
 </body>
