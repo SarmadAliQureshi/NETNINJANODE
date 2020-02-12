@@ -123,6 +123,7 @@ server.listen(8080,'127.0.1.1')
 
  var app = express();
  app.set('view engine','ejs')
+ app.use('/assets',express.static('assets'));
 
  app.listen(3000);
  app.get('/',function(req,res){
