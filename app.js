@@ -120,6 +120,8 @@ console.log(__dirname)
 server.listen(8080,'127.0.1.1')
 
  */
+ var bodyParser = require('body-parser')
+ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
  var app = express();
  app.set('view engine','ejs')
@@ -135,8 +137,13 @@ server.listen(8080,'127.0.1.1')
     res.render('index')
  })
 
+ app.post('/contact',urlencodedParser,function(req,res){
+    console.log('contact post',req.body) 
+    app.render('contact-success', {data:req.body} )
+ })
+ 
  app.get('/contact',function(req,res){
-     console.log(req.query)
+     console.log('contact get',req.query)
      res.render('contact',{qs:req.query})
  })
 
